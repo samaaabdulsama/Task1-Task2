@@ -33,28 +33,6 @@ graph = {
     'F': []
 }
 
-
-# DFS traversal (recursive)
-def dfs(graph, start, visited=None):
-    if visited is None:
-        visited = []
-    visited.append(start)
-    for neighbor in graph[start]:
-        if neighbor not in visited:
-            dfs(graph, neighbor, visited)
-    return visited
-
-
-# Define the graph
-graph = {
-    'A': ['B', 'C', 'D'],
-    'B': ['E', 'F'],
-    'C': [],
-    'D': [],
-    'E': [],
-    'F': []
-}
-
 # Run BFS
 bfs_with_table_and_order(graph, 'A')
 
